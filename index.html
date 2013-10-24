@@ -1,43 +1,45 @@
 ---
 layout: default
 title: resume
-workxps:
+workhxs:
 - company: 'Wizards of the Coast'
   company_url: 'http://wizards.com'
   position: 'Software Developer'
   contract: true
   start: '2013-05'
   end: null
-  tech: 
+  techs: 
   - p4
   - dotnet
-- company: 'MCG Health, LLC (formerly Milliman Care Guidelines)'
+  - sqlserver
+  bullets:
+  - PWP
+- company: 'MCG Health, LLC'
+  company_formerly: 'Milliman Care Guidelines'
+  company_url: 'http://careguidelines.com/'
   position: 'Software Development Engineer'
   start: '2011-10'
   end: '2013-05'
-  tech:
-  - tfs
-  - dotnet
-  - mssql
-  - oracle
+  techs:
   - svn
+  - dotnet
+  - sqlserver
+  - oracle
   - powershell
-  - vshpere
   bullets:
   - On development team of the flagship product
   - Was the only developer for a customer preview site of new functionality in flagship product
   - Agile / Scrum style development practices, supported by a white board and TFS for source code and work item tracking
   - Development against multiple RDBMS environment types, in both clean and upgrade installation scenarios.
-- company: 'Ventyx, an ABB Company (formerly Insert Key Solutions, Inc)'
+- company: 'Ventyx, an ABB Company'
+  company_formerly: 'Insert Key Solutions, Inc.'
   company_url: 'http://ventyx.com'
   position: 'Software Developer / Analyst'
   start: '2006-11'
   end: '2001-10'
-  tech:
-  - tfs
-  - vss
+  techs:
   - dotnet
-  - mssql
+  - sqlserver
   - oracle
   bullets:
   - Gather and analyze requirements from the customer
@@ -48,51 +50,59 @@ workxps:
   - Agile development, using Visual Studio 2010 and Team Foundation Server integration for maintenance of source code and issue tracking.
   - Loading of legacy data from customer sources,  typically Excel spreadsheets and Access databases
 - company: 'Exelon Business Services Company'
-  company_url: 
+  company_url: 'http://exeloncorp.com'
   contract: true
   position: 'SQL Query Analyzer'
   start: '2006-07'
   end: '2006-11'
-  tech:
+  techs:
   - msaccess
+  - sqlserver
   bullets:
   - Analysis of disparate, legacy data sources (typically Excel spreadsheets and Access databases), and loading that data into a new, centralized database.
 ---
 
-<hgroup>
     <h1>Work History</h1>    
 
-    {% for workxp in page.workxps %}
-        <div class="work-ex">
-            <h2>
-                {{ workxp.company }}
-                {% if workxp.company_url %}
-                <a href="{{ workxp.company_url }}">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC">
-                </a>
+{% for workhx in page.workhxs %}
+    <div class="workhx">
+        <h2>
+            {% if workhx.company_url %}
+                <a href="{{ workhx.company_url }}">{{ workhx.company }}</a>
+            {% else %}
+                {{ workhx.company }}
+            {% endif %}
+            
+            {% if workhx.company_formerly %}
+                <span class="formerly">
+                    (formerly {{ workhx.company_formerly }})
+                </span>
+            {% endif %}
+            
+            <span class="dates">
+                <time datetime="{{ workhx.start }}">{{ workhx.start | append: '-01' | date: '%B %Y' }}</time> to 
+                {% if workhx.end %}
+                    <time datetime="{{ workhx.end }}">{{ workhx.end | append: '-01' | date: '%B %Y' }}</time>
+                {% else %}
+                    present
                 {% endif %}
-                <div>
-                <small>
-                    <time datetime="{{ workxp.start }}">{{ workxp.start | append: '-01' | date: '%B %Y' }}</time> to 
-                    {% if workxp.end %}
-                        <time datetime="{{ workxp.end }}">{{ workxp.end | append: '-01' | date: '%B %Y' }}</time>
-                    {% else %}
-                        present
-                    {% endif %}
-                    {% if workxp.contract %}
-                    [contract]
-                    {% endif %}                    
-                </small>
-                <div>
-            </h2>
-            <h4>
-                {{ workxp.position }} 
-            </h4>
-            <ul>
-                {% for bullet in workxp.bullets %}
-                <li>{{ bullet }}</li>
-                {% endfor %}
-            </ul>
+                {% if workhx.contract %}
+                (contract)
+                {% endif %}                    
+            </span>
+            <span class="position">
+                {{ workhx.position }} 
+            </span>
+        </h2>
+        <div class="tech">
+            {% for tech in workhx.techs %}
+                <img src="img/{{tech}}.png" >
+            {% endfor %}
         </div>
-    {% endfor %}
-</hgroup>
+        <ul>
+            {% for bullet in workhx.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}

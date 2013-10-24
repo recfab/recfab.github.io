@@ -1,0 +1,30 @@
+# resume
+.workhx
+{
+    margin:2em;
+}
+.formerly
+{
+    font-size:small;
+}
+.dates
+{
+    display:block;
+    font-size:smaller;
+}
+.position
+{
+    display:block;
+    font-size:small;
+}
+.tech
+{
+    text-align:center;
+    background-color:#eee;
+    border:1px solid #ccc;
+    margin:auto 2em;
+}
+.tech img
+{
+    margin:.5em;
+}
