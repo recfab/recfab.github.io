@@ -1,6 +1,31 @@
 ---
 layout: default
 title: resume
+tech:
+- &svn
+    img: svn
+    alt: Subversion
+- &p4
+    img: p4
+    alt: Perforce
+- &dotnet
+    img: dotnet
+    alt: .NET
+- &oracle
+    img: oracle
+    alt: Oracle
+- &sqlserver
+    img: sqlserver
+    alt: Microsoft SQL Server
+- &msaccess
+    img: msaccess
+    alt: Microsoft Access
+- &powershell
+    img: powershell
+    alt: PowerShell
+- &jquery
+    img: jquery
+    alt: jQuery
 workhxs:
 - company: 'Wizards of the Coast'
   company_url: 'http://wizards.com'
@@ -9,11 +34,16 @@ workhxs:
   start: '2013-05'
   end: null
   techs: 
-  - p4
-  - dotnet
-  - sqlserver
+  - *p4
+  - *dotnet
+  - *sqlserver
+  - *jquery
   bullets:
-  - PWP
+  - Worked on PlanesWalkerPoints.com, a leaderboard site for players of Magic the Gathering, written in .NET MVC
+  - Utilized JQuery for front end javascript
+  - Worked on a few internal-facing sites written in a combination of ASP.NET Webforms and MVC
+  - Developed and consumed WCF based webservices
+  - Worked on several internal tools written in WPF
 - company: 'MCG Health, LLC'
   company_formerly: 'Milliman Care Guidelines'
   company_url: 'http://careguidelines.com/'
@@ -21,16 +51,16 @@ workhxs:
   start: '2011-10'
   end: '2013-05'
   techs:
-  - svn
-  - dotnet
-  - sqlserver
-  - oracle
-  - powershell
+  - *svn
+  - *dotnet
+  - *sqlserver
+  - *oracle
+  - *powershell
   bullets:
-  - On development team of the flagship product
-  - Was the only developer for a customer preview site of new functionality in flagship product
-  - Agile / Scrum style development practices, supported by a white board and TFS for source code and work item tracking
-  - Development against multiple RDBMS environment types, in both clean and upgrade installation scenarios.
+  - Worked on the development team of the flagship product, including as the sole developer for a customer preview site of new functionality
+  - Utilized Agile / Scrum style development practices in a small team, supported by a White Board and TFS for work item tracking, and TFS for source control. Prior to transitioning to TFS, we used Subversion for source control.
+  - Developed Sql Server and Oracle versions of the database, in both clean and upgrade installation scenarios.
+  - Developed a Powershell module to simplify our existing process of creationg / upgrading the databases on dev boxes, and for switching between multiple environments.
 - company: 'Ventyx, an ABB Company'
   company_formerly: 'Insert Key Solutions, Inc.'
   company_url: 'http://ventyx.com'
@@ -38,17 +68,18 @@ workhxs:
   start: '2006-11'
   end: '2001-10'
   techs:
-  - dotnet
-  - sqlserver
-  - oracle
+  - *dotnet
+  - *sqlserver
+  - *oracle
   bullets:
-  - Gather and analyze requirements from the customer
-  - Design, develop and maintain web application software in C# / ASP.NET versions 1.1, 2.0 and 3.5 & ASP.NET AJAX, including utilization of third-party libraries
+  - Gathered and analyzed requirements from customers
+  - Developed web applications in ASP.NET Web Forms 
+  - Developed Sql Server and Oracle based backends
+  - Created installation / upgrade scripts, and performed installation in customer environments.
   - Spearheaded an effort to develop and utilize a set of in-house libraries (responsibility later transferred to another developer)
-  - Design, develop and maintain databases in Oracle 9i, 10g and 11g, as well as Microsoft SQL Server 2000, 2005 and 2008
-  - Maintain source code with Visual Source Safe, both the standalone client and integrated with Visual Studio 2003, 2005 and 2008.
   - Agile development, using Visual Studio 2010 and Team Foundation Server integration for maintenance of source code and issue tracking.
-  - Loading of legacy data from customer sources,  typically Excel spreadsheets and Access databases
+  - Loaded legacy data from customer sources,  typically Excel spreadsheets and Access databases
+  - Development of intregration procedures for communication between our applications and the customers' other systems
 - company: 'Exelon Business Services Company'
   company_url: 'http://exeloncorp.com'
   contract: true
@@ -56,10 +87,10 @@ workhxs:
   start: '2006-07'
   end: '2006-11'
   techs:
-  - msaccess
-  - sqlserver
+  - *msaccess
+  - *sqlserver
   bullets:
-  - Analysis of disparate, legacy data sources (typically Excel spreadsheets and Access databases), and loading that data into a new, centralized database.
+  - Analysed disparate, legacy data sources (typically Excel spreadsheets and Access databases), and loaded that data into a new, centralized database.
 ---
 
     <h1>Work History</h1>    
@@ -75,7 +106,7 @@ workhxs:
             
             {% if workhx.company_formerly %}
                 <span class="formerly">
-                    (formerly {{ workhx.company_formerly }})
+                    (formerly <em>{{ workhx.company_formerly }})</em>
                 </span>
             {% endif %}
             
@@ -96,7 +127,7 @@ workhxs:
         </h2>
         <div class="tech">
             {% for tech in workhx.techs %}
-                <img src="img/{{tech}}.png" >
+                <img src="img/{{tech.img}}.png" alt="{{tech.alt}}" />
             {% endfor %}
         </div>
         <ul>
