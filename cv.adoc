@@ -1,39 +1,18 @@
-= Resume
+= Résumé
 Aaron Dorheim-Davis
 :toc:
-
-== About Me
-
-I am *Aaron Dorheim-Davis*, a software developer living in Seattle, WA. For the
-past 7 years, I have gained experience in a range of technology and in a variety
-of industries. Most of my work experience has been focused on C#, ASP.NET (both
-Webforms and MVC), utilizing either a SQL Server or Oracle backend. Much of this
-work has also involved integration between the company's application and the
-customer's other systems.
-
-While my work has been primarily on the Microsoft stack, I often use a personal
-projects to learn other languages and technology. The programming languages I
-have studied include PHP, VB, Haskell, Ruby and Python, plus a bit of OCaml and
-Scala. Of those, Python is the what I'm most comfortable with. I am interested
-in DevOps and am currently learning Vagrant.
-
-I am currently looking for a job inside the Seattle city limits, on the bus
-lines, and preferably in one of the following neighborhoods: Ballard, Fremont,
-Downtown, Pioneer Square or Belltown. Alternatively, I am also interested in
-working remotely.
-
-<<<
 
 == Work History
 
 === Wizards of the Coast
-May 2013 -> Present (contract)
+May 2013 -> Present
 
 |===
-|Perforce |SQL Server  |Visual Studio |jQuery
+| Perforce | SQL Server  | Visual Studio | WPF | jQuery | Marionette / Backbone
 |===
 
 .Software Developer
+- Developer on Wizards Large Tournament Reporter (WLTR) Team, an application for running large scale (2000-5000 players) Magic the Gathering Grand Prix tournaments, with a Marionette/Backbone.js front end, and a Node.js backend, which interfaces with some .NET assemblies via Edge.js
 - Helped develop and launch the New Wizards Account System
 - Worked on PlanesWalkerPoints.com, a leaderboard site for players of Magic the
   Gathering, written in .NET MVC
