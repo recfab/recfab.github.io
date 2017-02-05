@@ -28,8 +28,8 @@ These didn’t end up working for me.
 
 == Show & Tell
 
-http://bulletjournal.com/show-tell/
-http://bulletjournal.com/show-tell-2/
-http://bulletjournal.com/show-tell-3/
-http://bulletjournal.com/show-tell-4/
-http://bulletjournal.com/show-tell-5/
+* link:http://bulletjournal.com/show-tell/[Show & Tell 1]
+* link:http://bulletjournal.com/show-tell-2/[Show & Tell 2]
+* link:http://bulletjournal.com/show-tell-3/[Show & Tell 3]
+* link:http://bulletjournal.com/show-tell-4/[Show & Tell 4]
+* link:http://bulletjournal.com/show-tell-5/[Show & Tell 5]
