@@ -1,5 +1,5 @@
 = Résumé
-Aaron Dorheim-Davis
+Yael Namen
 :toc:
 
 == Work History
@@ -14,8 +14,7 @@ May 2013 -> Present
 .Software Developer
 - Developer on Wizards Large Tournament Reporter (WLTR) Team, an application for running large scale (2000-5000 players) Magic the Gathering Grand Prix tournaments, with a Marionette/Backbone.js front end, and a Node.js backend, which interfaces with some .NET assemblies via Edge.js
 - Helped develop and launch the New Wizards Account System
-- Worked on PlanesWalkerPoints.com, a leaderboard site for players of Magic the
-  Gathering, written in .NET MVC
+- Worked on PlanesWalkerPoints.com, a leaderboard site for players of Magic the Gathering, written in .NET MVC
 - Utilized JQuery for front end javascript
 - Worked on a few internal-facing sites written in a combination of ASP.NET
   Webforms and MVC
@@ -30,15 +29,10 @@ October 2011 -> May 2013
 |===
 
 .Software Development Engineer
-- Worked on the development team of the flagship product, including as the sole
-  developer for a customer preview site of new functionality
-- Utilized Agile / Scrum style development practices in a small team, supported
-  by a White Board and TFS for work item tracking, and TFS for source
-  control. Prior to transitioning to TFS, we used Subversion for source control.
-- Developed Sql Server and Oracle versions of the database, in both clean and
-  upgrade installation scenarios.
-- Developed a Powershell module to simplify our existing process of creationg /
-  upgrading the databases on dev boxes, and for switching between multiple
+- Worked on the development team of the flagship product, including as the sole developer for a customer preview site of new functionality
+- Utilized Agile / Scrum style development practices in a small team, supported by a White Board and TFS for work item tracking, and TFS for source control. Prior to transitioning to TFS, we used Subversion for source control.
+- Developed Sql Server and Oracle versions of the database, in both clean and upgrade installation scenarios.
+- Developed a Powershell module to simplify our existing process of creationg / upgrading the databases on dev boxes, and for switching between multiple
   environments.
 
 === Ventyx, an ABB Company (formerly _Insert Key Solutions, Inc._)
