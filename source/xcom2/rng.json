@@ -1,0 +1,21 @@
+{
+    "firstName": "Roughneck",
+    "lastName": "Geek",
+    "props": {
+        "helmet": "Kaiser Helmet",
+        "leftArm": "Ammo Gauntlet",
+        "rightArm": "Spiked Gauntlet",
+        "leftArmDeco": "Bare Shoulder",
+        "rightArmDeco": "Spiked Pauldron",
+        "legs": 4,
+        "torso": 7,
+        "leftArmTattoo": "Shadow Wolf",
+        "tattooColor": 56
+    },
+    "face": "Face C",
+    "hair": "Buzzcut",
+    "facialHair": "Thick Beard",
+    "mainArmorColor": 56,
+    "secondaryArmorColor": 78,
+    "weaponColor": 86
+}

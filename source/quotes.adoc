@@ -1,7 +1,6 @@
 = Quotes
 :nofooter:
 
-.To a gentile saying he would convert if Hillel could teach him the whole Torah while he stood on one foot.
 [quote, Hillel the Elder, b. Shabbat 31a]
 That which is hateful to you, do not unto another: This is the whole Torah. The
 rest is commentary -- now go study.
