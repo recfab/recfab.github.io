@@ -1,5 +1,9 @@
-= Résumé
+= Curriculum vitae
 Yael Namen
+:dotnet: image:dotnet.png[.NET]
+:jquery: image:jquery.png[jQuery]
+:mssql: image:sqlserver.png[Microsoft SQL Server]
+:p4: image:p4.png[Perforce]
 :toc:
 
 == Work History
@@ -8,7 +12,7 @@ Yael Namen
 May 2013 -> Present
 
 |===
-| Perforce | SQL Server  | Visual Studio | WPF | jQuery | Marionette / Backbone
+| {p4} | {mssql} | {dotnet} | WPF | {jquery} | Marionette / Backbone
 |===
 
 .Software Developer
@@ -25,7 +29,7 @@ May 2013 -> Present
 October 2011 -> May 2013
 
 |===
-| Subversion | Visual Studio | SQL Server |Oracle |PowerShell
+| Subversion | {vs} | SQL Server |Oracle |PowerShell
 |===
 
 .Software Development Engineer

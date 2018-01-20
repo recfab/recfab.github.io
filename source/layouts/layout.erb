@@ -11,6 +11,30 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <header>
+      Recursively Fabulous
+    </header>
+    <div class="row">
+      <article>
+
+      <%= yield %>
+
+      </article>
+      <nav class="main-nav">
+        <% urls = [
+          # '/index.html',
+          '/cv.html',
+          '/bullet_journal_supplies.html',
+          '/quotes.html',
+          '/conversion_and_jewish_stuff_notes.html',
+        ]
+        %>
+        <ul>
+          <% urls.map { | url | sitemap.find_resource_by_path url }.each do | page | %>
+            <li><%= link_to page.data['title'], page.url %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
