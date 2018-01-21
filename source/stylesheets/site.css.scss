@@ -1,47 +1,91 @@
-$base-color: #313131;
-$text-color: lighten($base-color, 50%);
+$base-color: #34193a;
+
+$background-color: $base-color;
+$text-color: white;
+$line-color: #4a306d;
+
+$shadow: lighten(black, 40%);
 
 body {
-  background-color: lighten($base-color, 40%);
+  background-color: $background-color;
+  color: $text-color;
+
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
+
+    margin:0;
+}
+
+header {
+  background: $background-color;
+
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 10rem;
+
+  text-align: center;
+  text-shadow: .02em .02em .03em $shadow;
 }
 
 a {
   color: $text-color;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
+  text-decoration: none;
 }
 
 %container {
-  background-color: $base-color;
-  border-radius: 1em;
-  padding: 2em;
-  margin: 1em;
-  box-shadow: .5em 1em .25em .25em lighten(black, 30%);
+  padding: 3em;
 
   color: $text-color;
 }
 
-article {
-  @extend %container;
-  flex-grow: 1;
-}
+nav {
+  display: flex;
+  flex-direction: row;
 
-nav.main-nav {
-  @extend %container;
+  text-align: center;
 
-  a {
-    // color: lighten($base-color, 50%);
+  margin: 2em;
+
+  span {
+    flex-grow: 1;
+
+    border: .1em solid $line-color;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 1em;
+    }
   }
 }
 
-.main-nav {
-  align-self: flex-start;
+.main {
+  display: flex;
+  flex-direction: row;
+
+  article {
+    @extend %container;
+    flex-grow: 1;
+
+    margin-left:10em;
+  }
+
+  address {
+    @extend %container;
+    align-self: flex-start;
+
+    border: .1em solid $line-color;
+
+    margin-right: 3em;
+
+    .img-frame {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+
+.sect2 {
+  padding-top: 2em;
 }

@@ -1,4 +1,4 @@
-= Curriculum vitae
+= Résumé
 Yael Namen
 :dotnet: image:dotnet.png[.NET]
 :jquery: image:jquery.png[jQuery]
@@ -8,6 +8,7 @@ Yael Namen
 
 == Work History
 
+[[wotc]]
 === Wizards of the Coast
 May 2013 -> Present
 
@@ -25,6 +26,7 @@ May 2013 -> Present
 - Developed and consumed WCF based webservices
 - Worked on several internal tools written in WPF
 
+[[mcg]]
 === MCG Health, LLC (formerly _Milliman Care Guidelines_)
 October 2011 -> May 2013
 
@@ -39,6 +41,7 @@ October 2011 -> May 2013
 - Developed a Powershell module to simplify our existing process of creating / upgrading the databases on dev boxes, and for switching between multiple
   environments.
 
+[[ventyx]]
 === Ventyx, an ABB Company (formerly _Insert Key Solutions, Inc._)
 November 2006 -> October 2011
 
@@ -61,6 +64,7 @@ November 2006 -> October 2011
 - Development of intregration procedures for communication between our
   applications and the customers' other systems
 
+[[exelon]]
 === Exelon Business Services Company
 July 2006 -> November 2006 (contract)
 

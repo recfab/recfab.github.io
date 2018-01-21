@@ -7,6 +7,7 @@ end
 
 activate :asciidoc
 activate :livereload
+activate :directory_indexes
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -34,11 +35,13 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def page_link url
+    page = @app.sitemap.find_resource_by_path url
+    title = page.data[:title]
+    link_to title, url
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

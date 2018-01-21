@@ -7,34 +7,31 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" rel="stylesheet">
+
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
     <header>
-      Recursively Fabulous
+      <%= link_to 'Recursively Fabulous', '/index.html' %>
     </header>
-    <div class="row">
+    <nav class="main-nav">
+      <span><%= page_link '/index.html' %></span>
+      <span><%= page_link '/cv.html' %></span>
+    </nav>
+    <div class="main">
       <article>
 
       <%= yield %>
 
       </article>
-      <nav class="main-nav">
-        <% urls = [
-          # '/index.html',
-          '/cv.html',
-          '/bullet_journal_supplies.html',
-          '/quotes.html',
-          '/conversion_and_jewish_stuff_notes.html',
-        ]
-        %>
-        <ul>
-          <% urls.map { | url | sitemap.find_resource_by_path url }.each do | page | %>
-            <li><%= link_to page.data['title'], page.url %></li>
-          <% end %>
-        </ul>
-      </nav>
+      <address>
+        <div class="img-frame">
+          <img src="https://secure.gravatar.com/avatar/3c01e5e12eafa3ba6aa757ab8afd0dd0?s=200" alt="headshot">
+        </div>
+      </address>
     </div>
   </body>
 </html>
