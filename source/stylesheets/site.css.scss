@@ -18,6 +18,12 @@ body {
     margin:0;
 }
 
+%container {
+  padding: 3em;
+
+  color: $text-color;
+}
+
 header {
   background: $background-color;
 
@@ -26,17 +32,13 @@ header {
 
   text-align: center;
   text-shadow: .02em .02em .03em $shadow;
+
+  padding-top: .25em;
 }
 
 a {
   color: $text-color;
   text-decoration: none;
-}
-
-%container {
-  padding: 3em;
-
-  color: $text-color;
 }
 
 nav {
@@ -52,6 +54,8 @@ nav {
 
     border: .1em solid $line-color;
 
+    background-color: lighten($base-color, 5%);
+
     a {
       display: inline-block;
       width: 100%;
@@ -63,6 +67,7 @@ nav {
 .main {
   display: flex;
   flex-direction: row;
+  margin-bottom: 3em;
 
   article {
     @extend %container;
@@ -74,6 +79,8 @@ nav {
   address {
     @extend %container;
     align-self: flex-start;
+
+    background-color: lighten($base-color, 5%);
 
     border: .1em solid $line-color;
 

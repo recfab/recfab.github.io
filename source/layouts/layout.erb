@@ -8,29 +8,51 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <%= stylesheet_link_tag "site" %>
+
+    <script src="https://use.fontawesome.com/3a48009e88.js"></script>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
     <header>
-      <%= link_to 'Recursively Fabulous', '/index.html' %>
+      <%= link_to data.site.title, '/index.html' %>
     </header>
     <nav class="main-nav">
       <span><%= page_link '/index.html' %></span>
       <span><%= page_link '/cv.html' %></span>
+      <span><%= page_link '/jewish-stuff.html' %></span>
+      <span><%= page_link '/bullet-journal.html' %></span>
     </nav>
     <div class="main">
       <article>
 
-      <%= yield %>
+        <h1><%= current_page.data.title %></h1>
+
+        <%= yield %>
 
       </article>
+
       <address>
         <div class="img-frame">
           <img src="https://secure.gravatar.com/avatar/3c01e5e12eafa3ba6aa757ab8afd0dd0?s=200" alt="headshot">
         </div>
+
+        <p>
+          <span class="fa fa-twitter" title="find me on twitter"></span>
+          <%= link_to '@recfab', 'https://twitter.com/recfab' %>
+        </p>
+
+        <p>
+          <span class="fa fa-instagram" title="find me on instagram"></span>
+          <%= link_to '@recfab', 'https://instagram.com/recfab' %>
+        </p>
+
+        <p>
+          <span class="fa fa-github" title="find me on github"></span>
+          <%= link_to '@recfab', 'https://github.com/recfab' %>
+        </p>
       </address>
     </div>
   </body>

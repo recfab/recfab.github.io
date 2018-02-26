@@ -5,7 +5,16 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :asciidoc
+activate :asciidoc do |asciidoc|
+  attributes = {}
+  allowed_value_types = [String, Numeric, TrueClass, FalseClass, Date, Time]
+  app.data.site.inject(attributes) do |accum, (k, v)|
+    accum[%(site-#{k})] = v if allowed_value_types.detect {|type| type === v }
+    accum
+  end
+  asciidoc.attributes = attributes
+end
+
 activate :livereload
 activate :directory_indexes
 
