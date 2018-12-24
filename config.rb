@@ -47,6 +47,9 @@ page '/*.txt', layout: false
 helpers do
   def page_link url
     page = @app.sitemap.find_resource_by_path url
+
+    throw Exception.new("page '#{url}' does not exist") if page.nil?
+
     title = page.data[:title]
     link_to title, url
   end
